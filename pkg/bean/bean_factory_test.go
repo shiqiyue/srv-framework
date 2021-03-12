@@ -2,7 +2,7 @@ package bean
 
 import (
 	"fmt"
-	"github.com/facebookarchive/inject"
+	"github.com/facebookgo/inject"
 	"github.com/stretchr/testify/assert"
 	"reflect"
 	"testing"

@@ -1,7 +1,7 @@
 package bean
 
 import (
-	"github.com/facebookarchive/inject"
+	"github.com/facebookgo/inject"
 	"reflect"
 )
 
