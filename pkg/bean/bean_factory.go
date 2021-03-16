@@ -9,14 +9,17 @@ var (
 	injectGraph *inject.Graph = &inject.Graph{}
 )
 
+// 将对象注册到injectGraph
 func Provide(objects ...*inject.Object) error {
 	return injectGraph.Provide(objects...)
 }
 
+// 根据对象的标签，完成对象属性的注入
 func Populate() error {
 	return injectGraph.Populate()
 }
 
+// 通过名称获取对象
 func GetObjectByName(name string) interface{} {
 	for _, o := range injectGraph.Objects() {
 		if o.Name == name {
@@ -27,6 +30,7 @@ func GetObjectByName(name string) interface{} {
 	return nil
 }
 
+// 通过类型获取对象
 func GetObjectByType(value interface{}) (res []interface{}) {
 	rv := reflect.TypeOf(value)
 	for _, o := range injectGraph.Objects() {
@@ -37,6 +41,7 @@ func GetObjectByType(value interface{}) (res []interface{}) {
 	return
 }
 
+// 通过类型获取对象
 func GetOneObjectByType(value interface{}) interface{} {
 	rv := reflect.TypeOf(value)
 	for _, o := range injectGraph.Objects() {

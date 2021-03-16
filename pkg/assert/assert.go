@@ -2,6 +2,7 @@ package assert
 
 import "errors"
 
+// 断言，不为nil
 func NotNil(i interface{}, err error) {
 	if i == nil {
 		if err != nil {
@@ -12,6 +13,7 @@ func NotNil(i interface{}, err error) {
 	}
 }
 
+// 断言，为nil
 func Nil(i interface{}, err error) {
 	if i != nil {
 		if err != nil {
