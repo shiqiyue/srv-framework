@@ -17,7 +17,7 @@ func (f *EndpointFinder) GetGqlServerEndpoint(serverName, moduleName string) str
 
 // 获取rest端点
 func (f EndpointFinder) GetRestServerEndpoint(serverName, moduleName string) string {
-	return f.getEndpoint(serverName, moduleName, "rest")
+	return f.getEndpoint(serverName, moduleName, "restful")
 }
 
 // 获取grpc端点
