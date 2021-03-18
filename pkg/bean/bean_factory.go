@@ -10,6 +10,11 @@ var (
 )
 
 // 将对象注册到injectGraph
+func ProvideBean(v interface{}) error {
+	return Provide(&inject.Object{Value: v})
+}
+
+// 将对象注册到injectGraph
 func Provide(objects ...*inject.Object) error {
 	return injectGraph.Provide(objects...)
 }
